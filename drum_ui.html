@@ -5,57 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drum Kit</title>
     <style>
-        body {
-            text-align: center;
-            background: #f2f2f2;
-            font-family: Arial, sans-serif;
-        }
+body {
+    text-align: center;
+    background: linear-gradient(135deg, #1e272e, #485460);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
 
-        h1 {
-            margin-top: 50px;
-            font-size: 3rem;
-            color: #333;
-        }
+h1 {
+    margin-top: 40px;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
 
-        .set {
-            margin-top: 50px;
-        }
+.set {
+    margin-top: 60px;
+}
 
-        .drum {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            font-size: 2rem;
-            font-weight: bold;
-            border-radius: 10px;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            background: #ff4757;
-            color: white;
-            box-shadow: 0 5px #e84118;
-            transition: all 0.1s;
-        }
+.drum {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(145deg, #ff6b81, #ff4757);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: all 0.2s ease;
+}
 
-        .drum:active {
-            box-shadow: 0 2px #e84118;
-            transform: translateY(3px);
-        }
+.drum:hover {
+    transform: scale(1.1);
+}
 
-        .pressed {
-            box-shadow: 0 2px #e84118;
-            transform: translateY(3px);
-            background: #ff6b81;
-        }
+.pressed {
+    transform: scale(0.95);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+    background: #ff9ff3;
+}
 
-        @media(max-width: 600px){
-            .drum{
-                width: 70px;
-                height: 70px;
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+footer {
+    margin-top: 50px;
+    opacity: 0.7;
+}
+</style>
 </head>
 <body>
 
@@ -87,31 +83,31 @@
         function makeSound(key){
             switch(key){
                 case 'w':
-                    let tom1 = new Audio("./sounds/tom-1.mp3");
+                    let tom1 = new Audio("./sounds/drum_stick/sounds/edr-synth-cowbell-high-169970.mp3");
                     tom1.play();
                     break;
                 case 'a':
-                    let tom2 = new Audio("./sounds/tom-2.mp3");
+                    let tom2 = new Audio("./sounds/drum_stick/sounds/freesound_community-071645_drumloopbreakskit010wav-88065.mp3");
                     tom2.play();
                     break;
                 case 's':
-                    let tom3 = new Audio("./sounds/tom-3.mp3");
+                    let tom3 = new Audio("./sounds/drum_stick/sounds/freesound_community-korg-kaossilator-pro-zap-drum-kit-perc-synth-28575.mp3");
                     tom3.play();
                     break;
                 case 'd':
-                    let tom4 = new Audio("./sounds/tom-4.mp3");
+                    let tom4 = new Audio("./sounds/drum_stick/sounds/fronbondi_skegs-drum-rock-style-drumbreak-01-145bpm-3bars-462984.mp3");
                     tom4.play();
                     break;
                 case 'j':
-                    let snare = new Audio("./sounds/snare.mp3");
+                    let snare = new Audio("./sounds/drum_stick/sounds/prettysleepy-coconut-grove-bongo-drum-kit-solo-by-prettysleepy-art-13825.mp3");
                     snare.play();
                     break;
                 case 'k':
-                    let crash = new Audio("./sounds/crash.mp3");
+                    let crash = new Audio("./sounds/drum_stick/sounds/prettysleepy-dubstep-drum-solo-140bpm-by-prettysleepy-art-15454.mp3");
                     crash.play();
                     break;
                 case 'l':
-                    let kick = new Audio("./sounds/kick-bass.mp3");
+                    let kick = new Audio("./sounds/drum_stick/sounds/soundreality-beat-of-time-128705.mp3");
                     kick.play();
                     break;
             }
